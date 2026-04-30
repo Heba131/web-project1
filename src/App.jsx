@@ -4,11 +4,11 @@ import MainPage from './pages/MainPage';
 import AboutPage from './pages/AboutPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import './App.css';
 
 function App() {
   return (
     <Router>
-      {/* الـ Header يجب أن يكون ثابتاً في كل الصفحات [cite: 11] */}
       <Header /> 
       <Routes>
         <Route path="/" element={<MainPage />} />
@@ -19,5 +19,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

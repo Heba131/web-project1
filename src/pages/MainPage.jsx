@@ -1,79 +1,54 @@
 import { useState } from 'react';
 
 const initialData = [
-  { id: 1, name: 'آيفون 15 برو', category: 'هواتف', price: 900 },
-  { id: 2, name: 'ماك بوك اير M2', category: 'لابتوبات', price: 1100 },
-  { id: 3, name: 'سماعات سوني WH', category: 'اكسسوارات', price: 250 },
-  { id: 4, name: 'سامسونج S24', category: 'هواتف', price: 850 },
-  { id: 5, name: 'ماوس لاسلكي', category: 'اكسسوارات', price: 40 },
-  { id: 6, name: 'لابتوب ديل XPS', category: 'لابتوبات', price: 1300 },
-  { id: 7, name: 'ساعة آبل Ultra', category: 'ساعات ذكية', price: 700 },
-  { id: 8, name: 'لوحة مفاتيح ميكانيكية', category: 'اكسسوارات', price: 120 },
-  { id: 9, name: 'شاشة ألعاب 4K', category: 'شاشات', price: 450 },
-  { id: 10, name: 'جهاز لوحي آيباد', category: 'تابلت', price: 600 },
+  { id: 1, name: 'iPhone 15 Pro', category: 'Phones', price: 999, image: 'https://images.unsplash.com/photo-1695048133142-1a20484d256e?w=400' },
+  { id: 2, name: 'MacBook Air M2', category: 'Laptops', price: 1199, image: 'https://images.unsplash.com/photo-1517336714460-4c50d91c04a4?w=400' },
+  { id: 3, name: 'Sony Headphones', category: 'Accessories', price: 350, image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400' },
+  { id: 4, name: 'Samsung Galaxy S24', category: 'Phones', price: 899, image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400' },
+  { id: 5, name: 'Logitech Mouse', category: 'Accessories', price: 49, image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400' },
+  { id: 6, name: 'Dell XPS Laptop', category: 'Laptops', price: 1299, image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=400' },
+  { id: 7, name: 'Apple Watch Ultra', category: 'Watches', price: 799, image: 'https://images.unsplash.com/photo-1434494878577-86c23bddca19?w=400' },
+  { id: 8, name: 'Gaming Keyboard', category: 'Accessories', price: 120, image: 'https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=400' },
+  { id: 9, name: '4K Gaming Monitor', category: 'Screens', price: 450, image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400' },
+  { id: 10, name: 'iPad Pro M2', category: 'Tablets', price: 799, image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400' },
 ];
 
 const MainPage = () => {
-  const [items] = useState(initialData);
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('none');
+  const [sortOrder, setSortOrder] = useState('none');
 
-  const filteredItems = items
+  const filtered = initialData
     .filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()))
     .sort((a, b) => {
-      if (sortBy === 'priceLow') return a.price - b.price;
-      if (sortBy === 'priceHigh') return b.price - a.price;
+      if (sortOrder === 'low') return a.price - b.price;
+      if (sortOrder === 'high') return b.price - a.price;
       return 0;
     });
 
   return (
-    <main style={{ padding: '20px', fontFamily: 'Arial, sans-serif', direction: 'rtl' }}>
-      <h1>متجر الإلكترونيات</h1>
-      
-      <div style={{ marginBottom: '20px', display: 'flex', gap: '10px' }}>
-        <input 
-          type="text" 
-          placeholder="ابحث عن جهاز..." 
-          style={{ padding: '8px', width: '250px' }}
-          onChange={(e) => setSearchTerm(e.target.value)} 
-        />
-
-        <select style={{ padding: '8px' }} onChange={(e) => setSortBy(e.target.value)}>
-          <option value="none">ترتيب حسب</option>
-          <option value="priceLow">السعر: من الأقل</option>
-          <option value="priceHigh">السعر: من الأعلى</option>
+    <main className="container">
+      <h1>Tech Store</h1>
+      <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
+        <input type="text" placeholder="Search products..." onChange={(e) => setSearchTerm(e.target.value)} style={{ maxWidth: '300px' }} />
+        <select onChange={(e) => setSortOrder(e.target.value)} style={{ maxWidth: '150px' }}>
+          <option value="none">Sort By</option>
+          <option value="low">Price: Low</option>
+          <option value="high">Price: High</option>
         </select>
       </div>
 
-      {/* --- بداية الجزء المستبدل (التصميم المتجاوب) --- */}
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', 
-        gap: '20px',
-        marginTop: '20px' 
-      }}>
-        {filteredItems.map(item => (
-          <div key={item.id} style={{ 
-            border: '1px solid #ddd', 
-            padding: '15px', 
-            borderRadius: '12px', 
-            textAlign: 'center',
-            backgroundColor: '#fff',
-            boxShadow: '0 4px 6px rgba(0,0,0,0.05)' 
-          }}>
-            <h3 style={{ color: '#0369a1' }}>{item.name}</h3>
-            <p style={{ color: '#666' }}>{item.category}</p>
-            <p style={{ fontWeight: 'bold', color: '#d4af37', fontSize: '1.2rem' }}>
-              {item.price} دينار
-            </p>
+      <div className="product-grid">
+        {filtered.map(item => (
+          <div key={item.id} className="product-card">
+            <img src={item.image} alt={item.name} className="product-img" />
+            <h3>{item.name}</h3>
+            <p>{item.category}</p>
+            <p className="product-price">${item.price}</p>
+            <button className="btn">View Details</button>
           </div>
         ))}
       </div>
-      {/* --- نهاية الجزء المستبدل --- */}
-
-      {filteredItems.length === 0 && <p>لا توجد نتائج تطابق بحثك.</p>}
     </main>
   );
 };
-
 export default MainPage;

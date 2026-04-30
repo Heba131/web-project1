@@ -1,14 +1,37 @@
-// src/pages/RegisterPage.jsx
+import React from 'react';
+
+// This is the Register Page component[cite: 2]
 const RegisterPage = () => {
   return (
-    <main style={{ padding: '40px', textAlign: 'center' }}>
-      <div style={{ maxWidth: '300px', margin: '0 auto', border: '1px solid #ddd', padding: '20px', borderRadius: '10px' }}>
-        <h2>إنشاء حساب جديد</h2>
+    <main className="container">
+      <div className="auth-card">
+        <h2>Create Account</h2>
+        <p style={{ color: '#666', marginBottom: '20px' }}>Join us to get the latest tech deals</p>
+        
         <form onSubmit={(e) => e.preventDefault()}>
-          <input type="text" placeholder="الاسم الكامل" style={{ display: 'block', width: '100%', marginBottom: '10px', padding: '8px' }} />
-          <input type="email" placeholder="البريد الإلكتروني" style={{ display: 'block', width: '100%', marginBottom: '10px', padding: '8px' }} />
-          <input type="password" placeholder="كلمة المرور" style={{ display: 'block', width: '100%', marginBottom: '10px', padding: '8px' }} />
-          <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#28a745', color: 'white', border: 'none', borderRadius: '5px' }}>تسجيل</button>
+          {/* Full Name Input */}
+          <input 
+            type="text" 
+            placeholder="Full Name" 
+            required 
+          />
+
+          {/* Email Input */}
+          <input 
+            type="email" 
+            placeholder="Email Address" 
+            required 
+          />
+
+          {/* Password Input */}
+          <input 
+            type="password" 
+            placeholder="Create Password" 
+            required 
+          />
+
+          {/* Register Button */}
+          <button type="submit" className="btn">Register</button>
         </form>
       </div>
     </main>
