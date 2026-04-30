@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 
 const initialData = [
@@ -14,7 +13,7 @@ const initialData = [
     name: 'MacBook Air M2', 
     category: 'Laptops', 
     price: 1199, 
-    image:'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop&bg=white' 
+    image:'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop' 
   },
   { 
     id: 3, 
@@ -43,13 +42,6 @@ const initialData = [
     category: 'Laptops', 
     price: 1299, 
     image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=400' 
-  },
-  { 
-    id: 7, 
-    name: 'Apple Watch Ultra', 
-    category: 'Watches', 
-    price: 799, 
-    image: 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/apple-watch-ultra-2-gps-cellular-49mm-titanium-ocean-band-blue-pdp-image-position-1?wid=800&hei=800&fmt=png-alpha&.v=1693706514245'
   },
   { 
     id: 8, 
