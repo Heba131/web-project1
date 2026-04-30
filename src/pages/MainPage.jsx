@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 const initialData = [
-  { id: 1, name: 'iPhone 15 Pro', category: 'Phones', price: 999, image:  'https://images.unsplash.com/photo-1603898037225-1f4f03c6f7c7?q=80&w=800&auto=format&fit=crop'},
+  { id: 1, name: 'iPhone 15 Pro', category: 'Phones', price: 999, image: 'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?q=80&w=800&auto=format&fit=crop'},
   { id: 2, name: 'MacBook Air M2', category: 'Laptops', price: 1199, image:  'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop&bg=white'},
   { id: 3, name: 'Sony Headphones', category: 'Accessories', price: 350, image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400' },
   { id: 4, name: 'Samsung Galaxy S24', category: 'Phones', price: 899, image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400' },
