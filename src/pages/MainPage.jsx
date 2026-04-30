@@ -1,8 +1,9 @@
 import { useState } from 'react';
 
 const initialData = [
-  { id: 1, name: 'iPhone 15 Pro', category: 'Phones', price: 999, image: 'https://images.unsplash.com/photo-1695048133142-1a20484d256e?w=400' },
-  { id: 2, name: 'MacBook Air M2', category: 'Laptops', price: 1199, image: 'https://images.unsplash.com/photo-1517336714460-4c50d91c04a4?w=400' },
+  // Updated images to more reliable sources
+  { id: 1, name: 'iPhone 15 Pro', category: 'Phones', price: 999, image: 'https://images.pexels.com/photos/18525574/pexels-photo-18525574.jpeg?auto=compress&cs=tinysrgb&w=400' },
+  { id: 2, name: 'MacBook Air M2', category: 'Laptops', price: 1199, image: 'https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=400' },
   { id: 3, name: 'Sony Headphones', category: 'Accessories', price: 350, image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400' },
   { id: 4, name: 'Samsung Galaxy S24', category: 'Phones', price: 899, image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400' },
   { id: 5, name: 'Logitech Mouse', category: 'Accessories', price: 49, image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400' },
@@ -17,8 +18,12 @@ const MainPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortOrder, setSortOrder] = useState('none');
 
+  // Modified logic for General Search (Name + Category)
   const filtered = initialData
-    .filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()))
+    .filter(item => 
+      item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+      item.category.toLowerCase().includes(searchTerm.toLowerCase())
+    )
     .sort((a, b) => {
       if (sortOrder === 'low') return a.price - b.price;
       if (sortOrder === 'high') return b.price - a.price;
@@ -27,10 +32,16 @@ const MainPage = () => {
 
   return (
     <main className="container">
-      <h1>Tech Store</h1>
-      <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
-        <input type="text" placeholder="Search products..." onChange={(e) => setSearchTerm(e.target.value)} style={{ maxWidth: '300px' }} />
-        <select onChange={(e) => setSortOrder(e.target.value)} style={{ maxWidth: '150px' }}>
+      {/* Title with silver color is handled in CSS */}
+      <h1 className="page-title">Tech Store</h1>
+      
+      <div className="search-controls">
+        <input 
+          type="text" 
+          placeholder="Search by name or category (e.g. Phone)..." 
+          onChange={(e) => setSearchTerm(e.target.value)} 
+        />
+        <select onChange={(e) => setSortOrder(e.target.value)}>
           <option value="none">Sort By</option>
           <option value="low">Price: Low</option>
           <option value="high">Price: High</option>
@@ -51,4 +62,5 @@ const MainPage = () => {
     </main>
   );
 };
+
 export default MainPage;
