@@ -7,14 +7,14 @@ const initialData = [
     name: 'iPhone 15 Pro', 
     category: 'Phones', 
     price: 999, 
-    image: 'https://images.unsplash.com/photo-1695048133142-1a20484d256e?q=80&w=500&auto=format&fit=crop' 
+    image: 'https://images.pexels.com/photos/18525574/pexels-photo-18525574.jpeg'
   },
   { 
     id: 2, 
     name: 'MacBook Air M2', 
     category: 'Laptops', 
     price: 1199, 
-    image: 'https://images.unsplash.com/photo-1517336714460-4c50d91c04a4?q=80&w=500&auto=format&fit=crop' 
+    image:'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop&bg=white' 
   },
   { 
     id: 3, 
@@ -49,7 +49,7 @@ const initialData = [
     name: 'Apple Watch Ultra', 
     category: 'Watches', 
     price: 799, 
-    image: 'https://images.unsplash.com/photo-1696446701796-da61225697cc?q=80&w=500&auto=format&fit=crop' 
+    image:'https://images.unsplash.com/photo-1695914108191-c0360f089601?q=80&w=800&auto=format&fit=crop'
   },
   { 
     id: 8, 
