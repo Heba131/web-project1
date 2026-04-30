@@ -83,6 +83,7 @@ const MainPage = () => {
 
   return (
     <main className="container">
+      {/* هنا الكود الذي سيربط مع التنسيق الفضي في App.css */}
       <h1 className="page-title">Tech Store</h1>
       
       <div className="search-controls">
@@ -92,9 +93,9 @@ const MainPage = () => {
           onChange={(e) => setSearchTerm(e.target.value)} 
         />
         <select onChange={(e) => setSortOrder(e.target.value)}>
-          <option value="none">Sort By</option>
-          <option value="low">Price: Low</option>
-          <option value="high">Price: High</option>
+          <option value="none">Sort By Price</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
         </select>
       </div>
 
