@@ -48,7 +48,7 @@ const initialData = [
     name: 'AirPods Pro', 
     category: 'Accessories', 
     price: 249, 
-    image: 'https://images.unsplash.com/photo-1588423770574-910ae27735a7?q=80&w=500&auto=format&fit=crop' 
+    image: 'https://placehold.co/400x400/1a1f29/00a3ff?text=AirPods+Pro'
   },
   { 
     id: 8, 
