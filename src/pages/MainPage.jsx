@@ -2,8 +2,8 @@
 import { useState } from 'react';
 
 const initialData = [
-  { id: 1, name: 'iPhone 15 Pro', category: 'Phones', price: 999, image: 'https://images.unsplash.com/photo-1695048133142-1a20484d256e?q=80&w=500&auto=format&fit=crop' },
-  { id: 2, name: 'MacBook Air M2', category: 'Laptops', price: 1199, image: 'https://images.unsplash.com/photo-1517336714460-4c50d91c04a4?q=80&w=500&auto=format&fit=crop' },
+  { id: 1, name: 'iPhone 15 Pro', category: 'Phones', price: 999, image: 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-max-black-titanium-select?wid=500&hei=500&fmt=jpeg&qlt=90&.v=1692845702708' },
+  { id: 2, name: 'MacBook Air M2', category: 'Laptops', price: 1199, image:  'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-midnight-select-20220606?wid=500&hei=500&fmt=jpeg&qlt=90&.v=1653493200207'},
   { id: 3, name: 'Sony Headphones', category: 'Accessories', price: 350, image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400' },
   { id: 4, name: 'Samsung Galaxy S24', category: 'Phones', price: 899, image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400' },
   { id: 5, name: 'Logitech Mouse', category: 'Accessories', price: 49, image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400' },
