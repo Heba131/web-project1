@@ -43,12 +43,12 @@ const initialData = [
     price: 1299, 
     image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=400' 
   },
- { 
+{ 
   id: 7, 
-  name: 'Smart Home Speaker', 
-  category: 'Accessories', 
+  name: 'Smart Fitness Watch', 
+  category: 'Watches', 
   price: 199, 
-  image: 'https://cdn.pixabay.com/photo/2019/04/15/15/47/smart-home-4129594_1280.jpg' 
+  image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=500&auto=format&fit=crop' 
 },
   { 
     id: 8, 
