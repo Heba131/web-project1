@@ -2,8 +2,8 @@
 import { useState } from 'react';
 
 const initialData = [
-  { id: 1, name: 'iPhone 15 Pro', category: 'Phones', price: 999, image: 'https://images.unsplash.com/photo-1603898037225-1f4f03c6f7c7?q=80&w=800&auto=format&fit=crop' },
-  { id: 2, name: 'MacBook Air M2', category: 'Laptops', price: 1199, image:  'https://images.unsplash.com/photo-1517336714460-4c50d91c04a4?q=80&w=800&auto=format&fit=crop'},
+  { id: 1, name: 'iPhone 15 Pro', category: 'Phones', price: 999, image: 'https://www.pngall.com/wp-content/uploads/13/iPhone-15-Pro-PNG-Image.png'},
+  { id: 2, name: 'MacBook Air M2', category: 'Laptops', price: 1199, image:   'https://www.pngall.com/wp-content/uploads/5/Macbook-PNG-Image.png'},
   { id: 3, name: 'Sony Headphones', category: 'Accessories', price: 350, image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400' },
   { id: 4, name: 'Samsung Galaxy S24', category: 'Phones', price: 899, image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400' },
   { id: 5, name: 'Logitech Mouse', category: 'Accessories', price: 49, image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400' },
