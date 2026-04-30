@@ -44,6 +44,13 @@ const initialData = [
     image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=400' 
   },
   { 
+    id: 7, 
+    name: 'AirPods Pro', 
+    category: 'Accessories', 
+    price: 249, 
+    image: 'https://images.unsplash.com/photo-1588423770574-910ae27735a7?q=80&w=500&auto=format&fit=crop' 
+  },
+  { 
     id: 8, 
     name: 'Gaming Keyboard', 
     category: 'Accessories', 
@@ -83,7 +90,6 @@ const MainPage = () => {
 
   return (
     <main className="container">
-      {/* هنا الكود الذي سيربط مع التنسيق الفضي في App.css */}
       <h1 className="page-title">Tech Store</h1>
       
       <div className="search-controls">
