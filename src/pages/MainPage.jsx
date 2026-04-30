@@ -43,13 +43,13 @@ const initialData = [
     price: 1299, 
     image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=400' 
   },
-  { 
-    id: 7, 
-    name: 'AirPods Pro', 
-    category: 'Accessories', 
-    price: 249, 
-    image:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/AirPods_Pro.png/600px-AirPods_Pro.png'
-  },
+ { 
+  id: 7, 
+  name: 'Smart Home Speaker', 
+  category: 'Accessories', 
+  price: 199, 
+  image: 'https://cdn.pixabay.com/photo/2019/04/15/15/47/smart-home-4129594_1280.jpg' 
+},
   { 
     id: 8, 
     name: 'Gaming Keyboard', 
