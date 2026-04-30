@@ -2,13 +2,13 @@
 import { useState } from 'react';
 
 const initialData = [
-  { id: 1, name: 'iPhone 15 Pro', category: 'Phones', price: 999, image:  'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-natural-titanium-select?wid=800&hei=800&fmt=png-alpha&.v=1692845702708'},
+  { id: 1, name: 'iPhone 15 Pro', category: 'Phones', price: 999, image: 'https://www.apple.com/v/iphone-15-pro/c/images/overview/welcome/hero_endframe__ov6ewwmbhi6e_large.jpg'},
   { id: 2, name: 'MacBook Air M2', category: 'Laptops', price: 1199, image:  'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop&bg=white'},
   { id: 3, name: 'Sony Headphones', category: 'Accessories', price: 350, image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400' },
   { id: 4, name: 'Samsung Galaxy S24', category: 'Phones', price: 899, image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400' },
   { id: 5, name: 'Logitech Mouse', category: 'Accessories', price: 49, image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400' },
   { id: 6, name: 'Dell XPS Laptop', category: 'Laptops', price: 1299, image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=400' },
-  { id: 7, name: 'Apple Watch Ultra', category: 'Watches', price: 799, image: 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/apple-watch-ultra-2-gps-cellular-49mm-titanium-ocean-band-blue-pdp-image-position-1?wid=800&hei=800&fmt=png-alpha&.v=1693706514245' },
+  { id: 7, name: 'Apple Watch Ultra', category: 'Watches', price: 799, image: 'https://www.apple.com/v/apple-watch-ultra-2/e/images/overview/hero/hero_hw_ultra__bs7m8p6ae7qu_large.jpg' },
   { id: 8, name: 'Gaming Keyboard', category: 'Accessories', price: 120, image: 'https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=400' },
   { id: 9, name: '4K Gaming Monitor', category: 'Screens', price: 450, image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400' },
   { id: 10, name: 'iPad Pro M2', category: 'Tablets', price: 799, image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400' },
