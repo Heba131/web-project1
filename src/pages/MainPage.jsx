@@ -49,7 +49,7 @@ const initialData = [
     name: 'Apple Watch Ultra', 
     category: 'Watches', 
     price: 799, 
-    image:'https://images.unsplash.com/photo-1695914108191-c0360f089601?q=80&w=800&auto=format&fit=crop'
+    image: 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/apple-watch-ultra-2-gps-cellular-49mm-titanium-ocean-band-blue-pdp-image-position-1?wid=800&hei=800&fmt=png-alpha&.v=1693706514245'
   },
   { 
     id: 8, 
