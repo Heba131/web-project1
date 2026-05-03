@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png.png'; // Make sure the logo is in src/assets/
-
+import logo from '../assets/logo.png.png'; 
 const Header = () => {
   return (
     <header className="main-header">
