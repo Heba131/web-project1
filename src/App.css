@@ -3,9 +3,20 @@
   --primary-blue: #00a3ff;
   --dark-bg: #0b0e14;
   --card-bg: #1a1f29;
-  --silver-text: #e2e8f0; /* درجة فضي فاتحة جداً */
-  --classic-silver: #c0c0c0; /* درجة الفضي الكلاسيكية */
+  --silver-text: #e2e8f0; 
+  --classic-silver: #c0c0c0; 
 }
+
+/* --- (تمت الإضافة من index.css) تنسيق الحاوية الرئيسية للجذر --- */
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* --------------------------------------------------------- */
 
 body {
   background-color: var(--dark-bg);
@@ -16,7 +27,7 @@ body {
 
 /* تعديل لون العنوان Tech Store */
 .page-title {
-  color: var(--classic-silver); /* تغيير اللون للفضي */
+  color: var(--classic-silver); 
   font-size: 2.5rem;
   font-weight: bold;
   margin-top: 20px;
@@ -33,7 +44,11 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid var(--primary-blue);
-  position: sticky; top: 0; z-index: 1000;
+  position: sticky; 
+  top: 0; 
+  z-index: 1000;
+  width: 100%; /* إضافة لضمان التغطية الكاملة */
+  box-sizing: border-box;
 }
 .site-logo { width: 45px; }
 .nav-links { display: flex; list-style: none; gap: 20px; }
@@ -67,3 +82,22 @@ input, select {
   width: 100%; padding: 12px; background: var(--primary-blue);
   color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;
 }
+
+/* --- (تمت الإضافة من index.css) تنسيقات العناوين والتجاوب --- */
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+  
+  .page-title {
+    font-size: 2rem; /* تصغير عنوان صفحة المتجر أيضاً للهواتف */
+  }
+}
+/* --------------------------------------------------------- */
