@@ -92,7 +92,7 @@ const MainPage = () => {
     <main className="container">
       <h1 className="page-title">Tech Store</h1>
       
-      <div className="search-controls">
+      <div>
         <input 
           type="text" 
           placeholder="Search products..." 
